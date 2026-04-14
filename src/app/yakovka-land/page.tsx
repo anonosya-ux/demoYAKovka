@@ -47,7 +47,6 @@ export default function YakovkaLandPage() {
               </div>
             </div>
           </div>
-          </div>
         </div>
       </section>
     </main>

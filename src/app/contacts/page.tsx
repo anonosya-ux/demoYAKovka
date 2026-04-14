@@ -99,8 +99,6 @@ export default function ContactsPage() {
               </div>
             </div>
 
-            </div>
-
           </div>
 
         </div>
