@@ -5,7 +5,7 @@ import PageHero from '@/components/PageHero';
 
 export default function GalleryPage() {
   const galleryDir = path.join(process.cwd(), 'public/images/gallery');
-  let images = [];
+  let images: { id: string; src: string; alt: string; }[] = [];
   
   try {
     if (fs.existsSync(galleryDir)) {
