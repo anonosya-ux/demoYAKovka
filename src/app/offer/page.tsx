@@ -33,10 +33,10 @@ export default function OfferPage() {
 
       <h3>5. Реквизиты Исполнителя</h3>
       <p>
-        {siteConfig.business.name}<br/>
-        <b>ИНН:</b> {siteConfig.business.inn}<br/>
+        {siteConfig.contacts.legal.name}<br/>
+        <b>ИНН:</b> {siteConfig.contacts.legal.inn}<br/>
         <b>ОГРНИП:</b> 304220311200234<br/>
-        <b>Юридический адрес:</b> Алтайский край, г. Белокуриха, ул. Угрюмова, д. 4
+        <b>Юридический адрес:</b> {siteConfig.contacts.legal.address}
       </p>
     </LegalPageLayout>
   );
