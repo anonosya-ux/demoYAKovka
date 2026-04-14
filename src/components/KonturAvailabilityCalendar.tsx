@@ -5,7 +5,7 @@ import { useEffect } from "react";
 export default function KonturAvailabilityCalendar() {
   useEffect(() => {
     const hwInit = () => {
-      const HW = window.HotelWidget;
+      const HW = (window as any).HotelWidget;
       if (!HW) return;
 
       try {
@@ -21,16 +21,16 @@ export default function KonturAvailabilityCalendar() {
       }
     };
 
-    if (window.HotelWidget) {
+    if ((window as any).HotelWidget) {
       hwInit();
-    } else if (!window.konturScriptLoaded) {
-      window.konturScriptLoaded = true;
+    } else if (!(window as any).konturScriptLoaded) {
+      (window as any).konturScriptLoaded = true;
       const script = document.createElement("script");
       script.src = "https://bookonline24.ru/widget.js";
       script.async = true;
       script.onload = () => {
-        if (window.HotelWidget) {
-          window.HotelWidget.init({
+        if ((window as any).HotelWidget) {
+          (window as any).HotelWidget.init({
             hotelId: "2774874f-1347-4c7d-a835-9791d5814751",
             version: "2",
           });
@@ -40,7 +40,7 @@ export default function KonturAvailabilityCalendar() {
       document.head.appendChild(script);
     } else {
       const interval = setInterval(() => {
-        if (window.HotelWidget) {
+        if ((window as any).HotelWidget) {
           hwInit();
           clearInterval(interval);
         }

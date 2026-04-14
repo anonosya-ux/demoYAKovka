@@ -5,6 +5,7 @@ import FeatureCard from "@/components/FeatureCard";
 import RoomCard from "@/components/RoomCard";
 import FloatingReviews from "@/components/FloatingReviews";
 import RevealText from "@/components/RevealText";
+import ParallaxGallery from "@/components/ParallaxGallery";
 import { rooms } from "@/data/rooms";
 
 export default function Home_Page() {
@@ -140,6 +141,9 @@ export default function Home_Page() {
           </div>
         </div>
       </section>
+
+      {/* Advanced Parallax Gallery Interaction */}
+      <ParallaxGallery />
 
       {/* Floating Interactive Reviews */}
       <FloatingReviews />

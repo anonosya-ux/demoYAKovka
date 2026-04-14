@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { ArrowRight } from "lucide-react";
+import MagneticButton from "./MagneticButton";
 
 export default function HeroVideo() {
   const ref = useRef(null);
@@ -90,21 +92,27 @@ export default function HeroVideo() {
             Элегантный отдых у подножия живописной горы в Белокурихе. Погружение в сибирскую природу с абсолютным комфортом.
           </p>
 
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/booking" className="btn btn-accent" style={{ fontSize: '1.125rem', padding: '1rem 2.5rem', transition: 'all 0.3s' }}>
-              Забронировать
-            </Link>
-            <Link href="#about" className="btn" style={{ 
-              fontSize: '1.125rem', padding: '1rem 2.5rem', 
-              backgroundColor: 'rgba(255,255,255,0.1)', 
-              border: '1px solid rgba(255,255,255,0.3)',
-              backdropFilter: 'blur(12px)',
-              WebkitBackdropFilter: 'blur(12px)',
-              color: '#fff',
-              transition: 'all 0.3s'
-            }}>
-              Узнать больше
-            </Link>
+          <div style={{ marginTop: '2.5rem', display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+            <MagneticButton magneticStrength={25}>
+              <Link
+                href="/rooms"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  padding: '1rem 2rem',
+                  backgroundColor: 'var(--accent)',
+                  color: '#fff',
+                  borderRadius: '2rem',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  transition: 'all 0.3s ease',
+                }}
+                className="hover:scale-105 hover:shadow-lg"
+              >
+                Выбрать номер <ArrowRight size={20} />
+              </Link>
+            </MagneticButton>
           </div>
         </div>
       </motion.div>
