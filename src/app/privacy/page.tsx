@@ -44,7 +44,7 @@ export default function PrivacyPage() {
       <h3>5. Контакты</h3>
       <p>
         По любым вопросам, связанным с обработкой персональных данных, вы можете связаться с нами по адресу: 
-        <br/><b>Email:</b> {siteConfig.contacts.emails[0]}
+        <br/><b>Email:</b> {siteConfig.contacts.email}
         <br/><b>Телефон:</b> {siteConfig.contacts.phones[0]}
       </p>
     </LegalPageLayout>

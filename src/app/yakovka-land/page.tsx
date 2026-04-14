@@ -41,7 +41,7 @@ export default function YakovkaLandPage() {
               </div>
               
               <div style={{ marginTop: '1rem' }}>
-                <a href={`mailto:${siteConfig.contacts.emails[0]}`} className="btn btn-accent px-8 py-3 text-lg" style={{ display: 'inline-flex' }}>
+                <a href={`mailto:${siteConfig.contacts.email}`} className="btn btn-accent px-8 py-3 text-lg" style={{ display: 'inline-flex' }}>
                   Получить презентацию для инвесторов
                 </a>
               </div>
