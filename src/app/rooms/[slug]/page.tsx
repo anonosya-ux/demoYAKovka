@@ -11,8 +11,9 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const room = rooms.find((r) => r.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const room = rooms.find((r) => r.slug === resolvedParams.slug);
   if (!room) return { title: 'Номер не найден' };
 
   return {
@@ -21,8 +22,9 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function RoomPage({ params }: { params: { slug: string } }) {
-  const room = rooms.find((r) => r.slug === params.slug);
+export default async function RoomPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const room = rooms.find((r) => r.slug === resolvedParams.slug);
 
   if (!room) {
     notFound();
