@@ -4,8 +4,14 @@ import Image from "next/image";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
+interface GalleryImage {
+  id: string;
+  src: string;
+  alt?: string;
+}
+
 interface GalleryProps {
-  images: string[];
+  images: GalleryImage[];
 }
 
 export default function Gallery({ images }: GalleryProps) {
@@ -31,9 +37,9 @@ export default function Gallery({ images }: GalleryProps) {
         gap: '1.5rem',
         marginTop: '2rem'
       }}>
-        {images.map((src, index) => (
+        {images.map((img, index) => (
           <div 
-            key={index}
+            key={img.id || index.toString()}
             onClick={() => openLightbox(index)}
             style={{ 
               position: 'relative', 
@@ -46,8 +52,8 @@ export default function Gallery({ images }: GalleryProps) {
             className="hover-lift"
           >
             <Image 
-              src={src} 
-              alt={`Фото ${index + 1}`} 
+              src={img.src} 
+              alt={img.alt || `Фото ${index + 1}`} 
               fill 
               style={{ objectFit: 'cover', transition: 'transform 0.5s ease' }} 
               className="gallery-img"
@@ -78,8 +84,8 @@ export default function Gallery({ images }: GalleryProps) {
 
           <div style={{ position: 'relative', width: '80vw', height: '80vh' }} onClick={e => e.stopPropagation()}>
             <Image 
-              src={images[selectedIndex]} 
-              alt={`Увеличенное фото ${selectedIndex + 1}`} 
+              src={images[selectedIndex].src} 
+              alt={images[selectedIndex].alt || `Увеличенное фото ${selectedIndex + 1}`} 
               fill 
               style={{ objectFit: 'contain' }} 
               priority
