@@ -11,7 +11,7 @@ export default function PaymentPage() {
 
       <div style={{ display: 'grid', gap: '1.5rem', marginTop: '2rem' }}>
         <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start', padding: '1.5rem', backgroundColor: 'var(--muted)', borderRadius: 'var(--radius)' }}>
-          <div style={{ background: '#fff', p: '1rem', borderRadius: '50%', color: 'var(--primary)', width: '48px', height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ background: '#fff', padding: '1rem', borderRadius: '50%', color: 'var(--primary)', width: '48px', height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <CreditCard size={24} />
           </div>
           <div>
@@ -21,7 +21,7 @@ export default function PaymentPage() {
         </div>
 
         <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start', padding: '1.5rem', backgroundColor: 'var(--muted)', borderRadius: 'var(--radius)' }}>
-          <div style={{ background: '#fff', p: '1rem', borderRadius: '50%', color: 'var(--primary)', width: '48px', height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ background: '#fff', padding: '1rem', borderRadius: '50%', color: 'var(--primary)', width: '48px', height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <Landmark size={24} />
           </div>
           <div>
@@ -31,7 +31,7 @@ export default function PaymentPage() {
         </div>
 
         <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start', padding: '1.5rem', backgroundColor: 'var(--muted)', borderRadius: 'var(--radius)' }}>
-          <div style={{ background: '#fff', p: '1rem', borderRadius: '50%', color: 'var(--primary)', width: '48px', height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ background: '#fff', padding: '1rem', borderRadius: '50%', color: 'var(--primary)', width: '48px', height: '48px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <Banknote size={24} />
           </div>
           <div>
