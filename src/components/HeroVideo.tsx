@@ -119,7 +119,7 @@ export default function HeroVideo() {
 
       {/* Scroll Indicator */}
       <motion.div 
-        style={{ opacity, position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)', opacity: 0.7 }}
+        style={{ opacity, position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)' }}
       >
         <motion.div 
           animate={{ y: [0, 10, 0] }} 

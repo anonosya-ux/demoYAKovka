@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone, Mail, Instagram, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { navigationLinks, footerLinks } from "@/data/navigation";
 import { siteConfig } from "@/data/config";
 

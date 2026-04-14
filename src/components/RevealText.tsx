@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 interface RevealTextProps {
   text: string;
-  el?: keyof JSX.IntrinsicElements;
+  el?: any;
   className?: string;
   style?: React.CSSProperties;
   staggerDelay?: number;
@@ -50,7 +50,7 @@ export default function RevealText({
   };
 
   return (
-    <Wrapper className={className} style={{ ...style, margin: 0 }}>
+    <Wrapper className={className} style={{ ...style, margin: 0 } as any}>
       {/* We use whileInView so it triggers when scrolled to */}
       <motion.span
         variants={container}

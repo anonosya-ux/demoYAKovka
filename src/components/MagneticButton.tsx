@@ -63,7 +63,7 @@ export default function MagneticButton({
       <motion.button
         style={{ x: springX, y: springY }}
         className={className}
-        {...props}
+        {...(props as any)}
       >
         {children}
       </motion.button>
