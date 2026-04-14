@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global CSS Variables for Premium Lighter Chalet UI */
+:root {
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+
+  /* Lighter, fresher palette */
+  --background: #ffffff;
+  --foreground: #2c3639; /* Elegant dark slate, not pure black */
+
+  --primary: #2c5344; /* Refined soft alpine green */
+  --primary-foreground: #ffffff;
+
+  --accent: #d1b06b; /* Soft elegant gold */
+  --accent-foreground: #ffffff;
+
+  --muted: #f8f9f8; /* Very subtle cool off-white */
+  --muted-foreground: #718096;
+
+  --border: #ebf0ee;
+  --radius: 12px;
+
+  /* Softer, more dispersed shadows for a premium ethereal feel */
+  --shadow-sm: 0 2px 4px rgba(44, 54, 57, 0.04);
+  --shadow: 0 10px 25px -5px rgba(44, 54, 57, 0.05), 0 8px 10px -6px rgba(44, 54, 57, 0.01);
+  --shadow-md: 0 20px 40px -10px rgba(44, 54, 57, 0.08);
+  --shadow-lg: 0 30px 60px -15px rgba(44, 54, 57, 0.12);
+}
+
+/* CSS Reset & Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Base Utilities */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.text-center { text-align: center; }
+.text-balance { text-wrap: balance; }
+
+.section {
+  padding: 6rem 0;
+}
+@media (min-width: 768px) {
+  .section { padding: 8rem 0; }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  border-radius: 50px; /* Pill shape for modern feel */
+  font-weight: 500;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: 0 4px 14px rgba(44, 83, 68, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(44, 83, 68, 0.4);
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: var(--background);
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(209, 176, 107, 0.3);
+}
+
+.btn-accent:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(209, 176, 107, 0.4);
+  background-color: #dfbf7c;
+}
+
+/* Custom Effects */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+.hero-gradient {
+  /* Lighter overlay */
+  background: linear-gradient(135deg, rgba(30, 45, 38, 0.5) 0%, rgba(15, 25, 20, 0.7) 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Animations - Made smoother and longer */
+.animate-slide-up {
+  opacity: 0;
+  animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hover-lift {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Map specific styles */
+.map-container {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 4px solid #fff;
+}
