@@ -57,6 +57,7 @@ import Footer from "@/components/Footer";
 import FloatingBookBtn from "@/components/FloatingBookBtn";
 import FloatingScrollTop from "@/components/FloatingScrollTop";
 import MagicCursor from "@/components/MagicCursor";
+import ScrollProgress from "@/components/ScrollProgress";
 import StructuredData from "@/components/StructuredData";
 
 export default function RootLayout({
@@ -97,6 +98,7 @@ export default function RootLayout({
           </main>
           <FloatingBookBtn />
           <FloatingScrollTop />
+          <ScrollProgress />
           <MagicCursor />
           <Footer />
         </div>
